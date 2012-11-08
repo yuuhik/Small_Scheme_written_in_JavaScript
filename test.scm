@@ -1,0 +1,12 @@
+(define make-adder (lambda (n) (lambda (m) (+ m n))))
+(define add1 (make-adder 1))
+(define add2 (make-adder 5))
+(add1 10)
+(add2 10)
+(add2 11)
+
+(define make-counter (lambda (n) (lambda () (set! n (+ 1 n)) n)))
+(define counter (make-counter 100))
+(counter)
+(counter)
+(counter)
